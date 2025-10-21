@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\login\LoginController;
 use App\Http\Controllers\project\ProjectController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/login', [LoginController::class, 'login']);

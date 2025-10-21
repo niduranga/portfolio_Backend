@@ -36,6 +36,8 @@ class Login
             if ($this->isUserPasswordCorrect($password, $user->password)) {
                 return [
                     'status' => Response::HTTP_OK,
+                    'user_name' => $user->name,
+                    'user_email' => $user->email,
                     'user_id' => $user->id,
                     'token' => $user->createToken('token')->plainTextToken
                 ];
